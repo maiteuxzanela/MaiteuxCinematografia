@@ -3,94 +3,155 @@
 <head>
     <link rel=""stylesheet" href="styles.css">
     <title>Portfólio de cinematografia da Maiteux</title>
-</head>
-<body>
-    <header>
-        <div class="topo">
-            <h1 class="nome"> Maiteux Zanela</h1><br>
-            <h1 class="função"> Cinematografia</h1>
-            <img src="https://github.com/maiteuxzanela/Fotos/blob/main/Maiteux%20careca.jpeg?raw=true" class="foto"height="20%" width="20%">
-        </div>
-    </header>
-    <!--Exposição-->
-    <div class="expo">
-        <h2> Exposição <br> direção de fotografia        
-        </h2>
-        <p><a href="https://www.instagram.com/p/DCrzsXdPbCj/?img_index=3" style="color:#D4AF37">Menção honrosa Incentivo Primeiro Plano 2024</a></p>
-        <a href="https://drive.google.com/file/d/11LQElMubTQwvmSOKAsUarTTIOODlFfwB/view?usp=sharing">
-            <img src="
-https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20exposi%C3%A7%C3%A3o.jpg?raw=true" heigth="50%" width="50%" >
-        </a>
-    </div>
-    <!--Um homem feliz-->
-    <div class="homem">
-        <h2> Um homem feliz<br> direção de fotografia
-        </h2>
-        <p><a href="https://primeiroplano.art.br/premiados-primeiro-plano-2025/" style="color:#D4AF37"> Prêmio Luzes da Cidade Primeiro Plano 2025</a></p>
-        <a href="https://drive.google.com/file/d/1NDE2NG2CkRaXjIL1mhSNop809LMbhByS/view?usp=sharing">
-            <img src="https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20um%20homem%20feliz.jpg?raw=true" heigth="50%" width="50%">
-        </a>
-    </div>
-    <!--Cor-de-rosa-->
-    <div class="rosa">
-        <h2> Cor-de-rosa <br> direção de fotografia
-        </h2>
-        <p><a href="https://primeiroplano.art.br/premiados-primeiro-plano-2025/" style="color:#D4AF37"> Incentivo Primeiro Plano 2025 e Voto do Público Primeiro Plano 2025</a></p>
-        <a href="https://drive.google.com/file/d/1e72djsh6ub2sKdn_vLyv5xhkSHLEL0-4/view">
-            <img src="https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20cor-de-rosa.jpg?raw=true" heigth="50%" width="50%">  
-        </a>
-    </div>
-    <!--Lagamar-->
-    <div class="lagamar">
-        <h2> Lagamar <br> direção de fotografia
-        </h2>
-        <a href="https://www.youtube.com/watch?v=0OB9C_L-jQU ">
-            <img src="https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20lagamar.jpg?raw=true" heigth="50%" width="50%">  
-        </a>
-    </div>
     <style>
-        .topo{
-            padding: 5px;
-            background-color: burlywood;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .expo{
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; /* remove scroll horizontal se necessário */
+            transition: background-color 0.5s ease;        
+        }
+        .secao{
+            height: 110vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 30px;
-            background-color: rgb(232, 16, 16);
         }
-        .homem{
-            text-align: center;
-            padding: 30px;
-            background-color: rgb(15, 161, 213);
+        .nome{            
+            font-size: 80px;            
         }
-        .rosa{
-            text-align: center;
-            padding: 30px;
-            background-color: rgb(243, 25, 119);
-        }
-        .lagamar{
-            text-align: center;
-            padding: 30px;
-            background-color: rgb(42, 201, 219);
-        }
-        .nome{
-            background-color: brown;
-            font-size: 80px;
-            text-align: center;            
-        }
-                .função{
-            background-color: brown;
-            font-size: 60px;
-            text-align: center;
+        .função{
+            font-size: 40px;            
         }
         footer{
             text-align: center;
             padding: px;
-            background-color: burlywood;
+            background-color: #deb887;
         }
+        h2{
+            padding: 10px;
+        }
+        a img{
+            border: 2px solid white;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        p{
+            padding: 10px;
+        }
+        .dirfoto{
+            font-size: 40px;
+            padding: 10px;
+            padding-bottom: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+            font-weight: 100;
+        }
+        a.premios{
+            text-decoration: none;
+            color: #D4AF37;
+        }      
+        a.contatos{
+            text-decoration: none;
+            color: black;
+        }  
     </style>
+</head>
+<body>
+    <header>
+        <div class="secao" id="secao1">
+            <h1 class="nome"> <span class="nome">Maiteux Zanela</span> <br> <span class="função">Cinematografia</h1><br>                        
+        </div>
+    </header>
+    <!--Exposição-->
+    <div class="secao" id="secao2">
+        <h2> Exposição        
+        </h2>
+        <p> <span class="dirfoto">direção de fotografia</span></p>
+        <a href="https://drive.google.com/file/d/11LQElMubTQwvmSOKAsUarTTIOODlFfwB/view?usp=sharing">
+            <img src="
+https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20exposi%C3%A7%C3%A3o.jpg?raw=true" heigth="50%" width="50%" >
+        </a>
+        <p><a href="https://www.instagram.com/p/DCrzsXdPbCj/?img_index=3" class="premios">Menção honrosa Incentivo Primeiro Plano 2024</a></p>
+    </div>
+    <!--Cor-de-rosa-->
+    <div class="secao"id="secao3">
+        <h2> Cor-de-rosa 
+        </h2>
+        <p><span class="dirfoto">direção de fotografia</span></p>
+        <a href="https://drive.google.com/file/d/1e72djsh6ub2sKdn_vLyv5xhkSHLEL0-4/view">
+            <img src="https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20cor-de-rosa.jpg?raw=true" heigth="50%" width="50%">  
+        </a>
+        <p><a href="https://primeiroplano.art.br/premiados-primeiro-plano-2025/" class="premios"> Incentivo Primeiro Plano 2025 e Voto do Público Primeiro Plano 2025</a></p>
+    </div>
+    <!--Um homem feliz-->
+    <div class="secao"id="secao4">
+        <h2> Um homem feliz
+        </h2>
+        <p><span class="dirfoto">direção de fotografia</span></p>
+        <a href="https://drive.google.com/file/d/1NDE2NG2CkRaXjIL1mhSNop809LMbhByS/view?usp=sharing">
+            <img src="https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20um%20homem%20feliz.jpg?raw=true" heigth="50%" width="50%">
+        </a>
+        <p><a href="https://primeiroplano.art.br/premiados-primeiro-plano-2025/" class="premios"> Prêmio Luzes da Cidade Primeiro Plano 2025</a></p>
+    </div>    
+    <!--Lagamar-->
+    <div class="secao"id="secao5">
+        <h2> Lagamar 
+        </h2>
+        <p><span class="dirfoto">direção de fotografia</span></p>
+        <a href="https://www.youtube.com/watch?v=0OB9C_L-jQU ">
+            <img src="https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20lagamar.jpg?raw=true" heigth="50%" width="50%">  
+        </a>
+    </div>
     <footer> 
-        <p>instagram.com/maiteux.zanela <strong>maiteux.zanela@gmail.com</strong> whatsapp (24)998674468</p>  
+        <p><a href="https://www.instagram.com/maiteux.zanela/" class="contatos">instagram.com/maiteux.zanela</a> <strong>maiteux.zanela@gmail.com</strong> whatsapp (24)998674468</p>  
     </footer>
+    <script>
+        // Cores para cada seção
+        const coresPorSecao = [
+            "#DEB887", // Seção 1 - Burlywood
+            "#E81010", // Seção 2 - Vermelho
+            "#F31977", // Seção 3 - Rosa
+            "#0FA1D5",  // Seção 4 - Azul médio
+            "#2AC9DB"   // Seção 5 - Azul
+        ];
+
+        // Opções para o Intersection Observer
+        const opcoes = {
+            threshold: 0.5 // Quando 50% da seção estiver visível
+        };
+
+        // Callback para quando uma seção for observada
+        const callback = (entradas) => {
+            entradas.forEach(entrada => {
+                if (entrada.isIntersecting) {
+                    const id = entrada.target.id;
+                    const numeroSecao = parseInt(id.replace('secao', '')) - 1;
+                    
+                    // Muda o background do body
+                    document.body.style.backgroundColor = coresPorSecao[numeroSecao];
+                }
+            });
+        };
+
+        // Cria o observer
+        const observer = new IntersectionObserver(callback, opcoes);
+
+        // Observa todas as seções
+        document.querySelectorAll('.secao').forEach(secao => {
+            observer.observe(secao);
+        });
+
+        // Define cor inicial
+        document.body.style.backgroundColor = coresPorSecao[0];
+    </script>
 </body>
 </html>
