@@ -54,7 +54,7 @@
             padding: 10px;
             padding-bottom: 10px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
-            font-weight: 100;
+            font-weight: 100;            
         }
         a.premios{
             text-decoration: none;
@@ -65,7 +65,9 @@
             color: black;
         }  
         #secao1{
-            justify-content: flex-start;                        
+            justify-content: flex-start;
+            padding-top: 200px;
+            background: linear-gradient(180deg, #DEB887 0%, #DEB887 50%, #f20A0A 100%);                        
         }
     </style>
 </head>
@@ -119,18 +121,20 @@ https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20exposi%C3%A7%C3%A3o
         <p><a href="https://www.instagram.com/maiteux.zanela/" class="contatos">instagram.com/maiteux.zanela</a> <strong>maiteux.zanela@gmail.com</strong> whatsapp (24)998674468</p>  
     </footer>
     <script>
-        // Cores para cada seção
-        const coresPorSecao = [
-            "#DEB887", // Seção 1 - Burlywood
-            "#E81010", // Seção 2 - Vermelho
-            "#F31977", // Seção 3 - Rosa
-            "#0FA1D5",  // Seção 4 - Azul médio
-            "#2AC9DB"   // Seção 5 - Azul
-        ];
+        // Configuração das cores
+        const configCores = {
+            'secao1': '#f20A0A',
+            'secao2': '#f20A0A',
+            'secao3': '#DF0170',
+            'secao4': '#2AC9DB',
+            'secao5': '#5BEBFB'
+        };
 
+        const gradienteFixo = 'linear-gradient(180deg, #DEB887 0%, #f20A0A 100%)';
+        
         // Opções para o Intersection Observer
         const opcoes = {
-            threshold: 0.20 // Quando 50% da seção estiver visível
+            threshold: 0.2
         };
 
         // Callback para quando uma seção for observada
@@ -138,10 +142,17 @@ https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20exposi%C3%A7%C3%A3o
             entradas.forEach(entrada => {
                 if (entrada.isIntersecting) {
                     const id = entrada.target.id;
-                    const numeroSecao = parseInt(id.replace('secao', '')) - 1;
-                    
-                    // Muda o background do body
-                    document.body.style.backgroundColor = coresPorSecao[numeroSecao];
+                
+                    // Aplica a cor/gradiente correspondente
+                    document.body.style.background = configCores[id];
+                
+                    // Configurações extras para gradiente
+                    if (id === 'secao1') {
+                        document.body.style.backgroundAttachment = 'fixed';
+                        document.body.style.backgroundSize = 'cover';
+                    } else {
+                        document.body.style.backgroundAttachment = 'scroll';
+                    }
                 }
             });
         };
@@ -154,8 +165,10 @@ https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20exposi%C3%A7%C3%A3o
             observer.observe(secao);
         });
 
-        // Define cor inicial
-        document.body.style.backgroundColor = coresPorSecao[0];
+        // Define cor inicial (gradiente para primeira seção)
+        document.body.style.background = configCores['secao1'];
+        document.body.style.backgroundAttachment = 'fixed';
+        document.body.style.backgroundSize = 'cover';
     </script>
 </body>
 </html>
