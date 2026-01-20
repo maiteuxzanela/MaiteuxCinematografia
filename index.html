@@ -16,7 +16,7 @@
             transition: background-color 0.5s ease;        
         }
         .secao{
-            height: 120vh;
+            height: 150vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -43,8 +43,8 @@
             border: 2px solid white;
             border-radius: 10px;
             margin-bottom: 10px;
-            height: 60vh;
-            width: auto;
+            height: auto;
+            width: 85vw;
         }
         p{
             padding: 10px;
@@ -65,8 +65,7 @@
             color: black;
         }  
         #secao1{
-            justify-content: flex-end;   
-            margin: 0 0 20px 0;         
+            justify-content: flex-start;                        
         }
     </style>
 </head>
@@ -131,7 +130,7 @@ https://github.com/maiteuxzanela/Fotos/blob/main/frame%201%20exposi%C3%A7%C3%A3o
 
         // Opções para o Intersection Observer
         const opcoes = {
-            threshold: 0.5 // Quando 50% da seção estiver visível
+            threshold: 0.20 // Quando 50% da seção estiver visível
         };
 
         // Callback para quando uma seção for observada
