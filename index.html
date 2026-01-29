@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
 <head>
-    <link rel=""stylesheet" href="styles.css">
     <title>Portfólio de cinematografia da Maiteux</title>
+    <link rel="stylesheet" href="styles.css">    
     <style>
         * {
             margin: 0;
@@ -27,10 +27,14 @@
             text-align: center;
         }
         .nome{            
-            font-size: 120px;            
+            font-size: 120px;
+            z-index: 2;
+            position:relative            
         }
         .função{
-            font-size: 80px;            
+            font-size: 80px;  
+            z-index: 2;
+            position: relative;          
         }
         footer{
             text-align: center;
@@ -64,18 +68,32 @@
             text-decoration: none;
             color: black;
         }  
-        #secao1{
+        #secao1{            
             justify-content: flex-start;
-            padding-top: 35vh;
-            background: linear-gradient(180deg, #DEB887 0%, #DEB887 50%, #f20A0A 100%);                        
+            padding-top: 35vh;                                    
+        }    
+        .top{
+            display: grid;
+            grid-template-columns: 25% 75%;
+            background: linear-gradient(180deg, #DEB887 0%, #DEB887 50%, #f20A0A 100%);
+            z-index: 2; 
         }
+        .maiteux{
+            height: 100vh;
+            width: auto;
+        }        
     </style>
 </head>
 <body>
-    <header>
-        <div class="secao" id="secao1">
-            <h1 class="nome"> <span class="nome">Maiteux Zanela</span> <br> <span class="função">Cinematografia</h1><br>                        
-        </div>
+    <header>        
+        <section class="top">
+            <div>
+                <img src="https://github.com/maiteuxzanela/Fotos/blob/main/Maiteux%20no%20set.png?raw=true" class="maiteux">
+            </div>
+            <div class="secao" id="secao1">            
+                <h1> <span class="nome">Maiteux Zanela</span> <br> <span class="função">Cinematografia</h1><br>                        
+            </div>            
+        </section>         
     </header>
     <!--Exposição-->
     <div class="secao" id="secao2">
